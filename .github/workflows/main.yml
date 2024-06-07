@@ -1,8 +1,7 @@
 name: Test Schedule
 on:
-  push:
-  # schedule:
-  #   - cron: '*/5 * * * *'  # Runs every day at 7:43 AM UTC
+  schedule:
+  - cron: '*/2 * * * *'  # Runs every day at 7:43 AM UTC
   # workflow_dispatch:
   #   inputs:
   #     human:
