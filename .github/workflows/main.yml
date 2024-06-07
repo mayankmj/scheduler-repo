@@ -2,7 +2,7 @@ name: Test Schedule
 
 on:
   schedule:
-    - cron: '46 7 * * *'  # Runs every day at 7:43 AM UTC
+    - cron: '48 7 * * *'  # Runs every day at 7:43 AM UTC
   workflow_dispatch:
     inputs:
       human:
@@ -11,7 +11,7 @@ on:
         default: true
 
 jobs:
-  test_schedule:
+  Test-Schedule:
     runs-on: ubuntu-latest
     steps:
       - name: Display Message
