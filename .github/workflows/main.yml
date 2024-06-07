@@ -1,17 +1,18 @@
+name: Test Schedule
+
 on:
   schedule:
-    - cron: '43 7 * * *'
+    - cron: '46 7 * * *'  # Runs every day at 7:43 AM UTC
   workflow_dispatch:
     inputs:
       human:
         description: Did a human start this workflow?
         type: boolean
         default: true
+
 jobs:
   test_schedule:
     runs-on: ubuntu-latest
     steps:
-      - name: Not on Monday or Wednesday
-        run: echo "This step will be skipped on Monday and Wednesday"
-      - name: Every time
-        run: echo "This step will always run"
+      - name: Display Message
+        run: echo "This workflow was triggered at $(date)"
